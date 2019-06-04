@@ -7,7 +7,6 @@ Created on 08.05.2019
 '''
 
 #----------------------------------------------------------------------------------------------------------------
-
 # Base class for money-administration (purse, safe, ...)
 class VerwalteterGeldbetrag:
     
@@ -62,3 +61,29 @@ class AllgemeinesKonto(VerwalteterGeldbetrag):                  # child class
         #self.Kundendaten.zeige()
         print("Kundendaten: ", self.Kundendaten)
         VerwalteterGeldbetrag.zeige(self)
+
+
+
+#----------------------------------------------------------------------------------------------------------------
+# Missing: "Tagesumsatz"
+class AllgemeinesKontoMitTagesumsatz(AllgemeinesKonto):
+    def __init__(self, kundendaten, kontostand, max_Tagesumsatz):
+        super().__init__(kundendaten, kontostand)
+        self.MaxTagesumsatz = max_Tagesumsatz
+        self.UmsatzHeute = 0.0
+        
+    def transferMoeglich(self, betrag):
+        return (self.UmsatzHeute + betrag <= self.MaxTagesumsatz)   # condition: returns True or False   
+    
+    def einzahlenMoeglich(self, betrag):
+        return self.transferMoeglich(betrag) 
+    
+    def auszahlenMoeglich(self, betrag):
+        return self.transferMoeglich(betrag)
+    
+    def einzahlen(self, betrag):
+        if AllgemeinesKonto.einzahlen(self, betrag):
+            return 
+        
+        
+        
