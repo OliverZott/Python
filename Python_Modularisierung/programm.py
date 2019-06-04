@@ -11,9 +11,7 @@ Created on 29.04.2019
 
 
 import mathehelfer                                              # Modules used:    mathehelfer.fak()
-
-#gesamter Modulinhalt in Namensraum einbinden (evtl unerwünschte effekte) --> from ... import ...
-
+# gesamter Modulinhalt in Namensraum einbinden -evtl unerwuenschte effekte --> from ... import ...
 from mathehelfer import kehr                                    # Modules used:    kehr()
 import Paket_IO.py_in                                           # need of __init__ in sub folder to import packet (but empty init file!)
 import fibonacci                                                # use of __init__ in sub folder !!!

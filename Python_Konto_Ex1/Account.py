@@ -13,49 +13,49 @@ class Konto:
         '''
         Constructor
         '''
-        self.inhaber = inhaber
-        self.kontonummer = kontonummer
-        self.kontostand = kontostand
-        self.maxTagesumsatz = maxTagesumsatz
-        self.umsatzHeute = 0
+        self.Inhaber = inhaber
+        self.Kontonummer = kontonummer
+        self.Kontostand = kontostand
+        self.MaxTagesumsatz = maxTagesumsatz
+        self.UmsatzHeute = 0
         
     
     def zeige(self):
         #print("Konto von:", self.inhaber)
-        print("Konto von {}".format(self.inhaber)) 
+        print("Konto von {}".format(self.Inhaber)) 
         #print("Aktueller Kontostand von Kontonummer {} ist {}: ".format(konto["Kontonummer"],konto["Kontostand"]))
-        print("Aktueller Kontostand von Kontonummer {} ist {}: ".format(self.kontonummer,self.kontostand))
+        print("Aktueller Kontostand von Kontonummer {} ist {}: ".format(self.Kontonummer,self.Kontostand))
         #print("Heute schon {:.2f} von maximal {} umgesetzt".format(konto["UmsatzHeute"], konto["MaxTagesumsatz"]))
         return 
     
     def einzahlen(self, betrag):
-        if betrag < 0 or self.umsatzHeute + betrag > self.maxTagesumsatz:
-            print("Max Tagesumsatz ueberschritten. Aktueller Tagesumsatz betraegt {}".format(self.umsatzHeute))
+        if betrag < 0 or self.UmsatzHeute + betrag > self.MaxTagesumsatz:
+            print("Max Tagesumsatz ueberschritten. Aktueller Tagesumsatz betraegt {}".format(self.UmsatzHeute))
             return False
         else:
-            self.umsatzHeute += betrag
-            self.kontostand += betrag
+            self.UmsatzHeute += betrag
+            self.Kontostand += betrag
             return True
         
     def auszahlen(self, betrag):
-        if betrag < 0 or self.umsatzHeute + betrag > self.maxTagesumsatz:
+        if betrag < 0 or self.UmsatzHeute + betrag > self.MaxTagesumsatz:
             return False
         else:
-            self.umsatzHeute += betrag
-            self.kontostand -= betrag
+            self.UmsatzHeute += betrag
+            self.Kontostand -= betrag
             return True
     
     def geldtransfer (self, ziel, betrag):
         if (betrag < 0 or 
-            self.umsatzHeute + betrag > self.maxTagesumsatz or 
-            ziel.umsatzHeute + betrag > ziel.maxTagesumsatz):
+            self.UmsatzHeute + betrag > self.MaxTagesumsatz or 
+            ziel.UmsatzHeute + betrag > ziel.MaxTagesumsatz):
             return False
         else:
-            print("Ueberweise {} von Konto {} auf Konto {}".format(betrag,self.kontonummer,ziel.kontonummer))
-            self.umsatzHeute += betrag
-            ziel.umsatzHeute += betrag
-            self.kontostand -= betrag
-            ziel.kontostand += betrag
+            print("Ueberweise {} von Konto {} auf Konto {}".format(betrag,self.Kontonummer,ziel.Kontonummer))
+            self.UmsatzHeute += betrag
+            ziel.UmsatzHeute += betrag
+            self.Kontostand -= betrag
+            ziel.Kontostand += betrag
             return True
 
             
