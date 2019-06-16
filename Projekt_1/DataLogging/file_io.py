@@ -51,11 +51,11 @@ def file_io (temp, hum, lux):
     
 def filename():
     date = datetime.datetime.now().strftime("%Y-%m-%d")
-    path = r'C:\Users\Dura\eclipse-workspace\Python\Projekt_1\Messwerte' 
+    #path = r'C:\Users\Dura\eclipse-workspace\Python\Projekt_1\Messwerte' 
     f_name = "Messwerte_"  + date +".txt"
-    file_name = os.path.join(path, f_name)
+    #file_name = os.path.join(path, f_name)
     
-    return file_name 
+    return f_name 
     
     
 def dateTimeSleep():

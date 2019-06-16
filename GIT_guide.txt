@@ -1,0 +1,83 @@
+##########################################################
+# GIT - Guide											 #
+#														 #
+# Author:	Oliver Zott									 #
+# Date:		14.06.2019									 #
+#														 #
+##########################################################
+
+
+
+# ========================================================
+# Configuration
+# ========================================================
+
+git config --get user.name
+
+git config --get user.email
+
+
+
+# ========================================================
+# Creat Repository
+# ========================================================
+
+pwd												
+
+cd d:/Users/Dura/Documents/Arduino/Projekt_1	
+	
+git init											// initializig git repository (all files unharmrd)
+
+
+
+# ========================================================
+# Using git
+# ========================================================
+
+git status											// check current git status 
+
+git add *.py										// alle .py dateien in  staging area
+git add ./RelativePath/*.py							// add all .py files in folder according to relative path
+git add doc.txt										// add doc.txt 
+git add -u 											// will stage the modified and deleted files
+
+git rm --cached doc.txt								// remove doc.txt from stagged area
+git reset HEAD *									// reset all from stash
+
+git commit -m "message"								// all commited 
+git commit -a 										// to commit only the modified and deleted files.
+
+git log												// shows log of git usage
+
+
+
+# ========================================================
+# Remote Repository
+# ========================================================
+
+git remote add origin https://github.com/OliverZott/Arduino_Projekt1.git
+
+git remote
+
+git pull origin master --allow-unrelated-histories
+
+git push origin master  (git push --all origin)
+
+
+
+# ========================================================
+# GIT Ignore 
+# ========================================================
+https://stackoverflow.com/questions/987142/make-gitignore-ignore-everything-except-a-few-files
+
+# Ignore everything
+*
+# But not these files...
+!.gitignore
+!script.pl
+# ...even if they are in subdirectories
+!*/
+# if the files to be tracked are in subdirectories
+!*/a/b/file1.txt
+!*/a/b/c
+
