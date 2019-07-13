@@ -20,6 +20,7 @@ class A:
             return
         self._X = wert
 
+
 class B:
     def __init__(self):
         self._X = 110

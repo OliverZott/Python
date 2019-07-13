@@ -11,11 +11,13 @@ class A:
     def classplot(self):
         print("class A print: ", self.text)
 
+
 class B:
     # def __init__(self):
 
     def classplot(self):
         print("class B print ")
+
 
 class A1(A):
     def __init__(self, test):
@@ -26,9 +28,7 @@ class A1(A):
         print("class A1 print")
 
 
-
 class A2(A1):
-    #def __init__(self):
 
     def classplot(self):
         super().classplot()
@@ -37,6 +37,7 @@ class A2(A1):
 
 class B2(A2):
     def __init__(self, test):
+        super().__init__(test)
         self.text = test
     b = B()
 
