@@ -1,4 +1,4 @@
-'''
+"""
 USE of Packages and Modules / __init__.py
 
 https://docs.python.org/3/reference/import.html#regular-packages
@@ -6,14 +6,13 @@ https://stackoverflow.com/questions/448271/what-is-init-py-for
 
 Created on 29.04.2019
 @author: Dura
-'''
-
+"""
 
 
 import mathehelfer                                              # Modules used:    mathehelfer.fak()
 # gesamter Modulinhalt in Namensraum einbinden -evtl unerwuenschte effekte --> from ... import ...
 from mathehelfer import kehr                                    # Modules used:    kehr()
-import Paket_IO.py_in                                           # need of __init__ in sub folder to import packet (but empty init file!)
+import Paket_IO.py_in       # need of __init__ in sub folder to import packet (but empty init file!)
 import fibonacci                                                # use of __init__ in sub folder !!!
 
 
@@ -45,16 +44,14 @@ print("")
 print("------------------------------------------")
 
 
-
 # --------------------------------------------------------------------------------------------------
 # Call of Module in same directory 
 # --------------------------------------------------------------------------------------------------
 
-print ("Fakultaet : ", mathehelfer.fak(7))
+print("Fakultaet : ", mathehelfer.fak(7))
 print("")
-print ("Kehrwert: ", kehr(346))
+print("Kehrwert: ", kehr(346))
 print("")
-
 
 
 # --------------------------------------------------------------------------------------------------
@@ -70,12 +67,11 @@ print(zahl)
 # --------------------------------------------------------------------------------------------------
 
 print("------------------------------------------")
-#print ("Fibonacci with fib2(): ", fibonacci.fib2.fib_2(zahl))                 # here we still need the fib2 filename declaration !  WTF ?????
+# print ("Fibonacci with fib2(): ", fibonacci.fib2.fib_2(zahl))     # still need the fib2 filename declaration?
 print("")
-print ("Fibonacci with fib_1(): ", fibonacci.fib_1(zahl))                       # here we already imported fib1 via __init__ file !
+print("Fibonacci with fib_1(): ", fibonacci.fib_1(zahl))            # here we already imported fib1 via __init__ file!
 print("")
-print ("Fibonacci with fib_rec(): ", fibonacci.fib_rec(zahl))
+print("Fibonacci with fib_rec(): ", fibonacci.fib_rec(zahl))
 print("")
 
 print("------------------------------------------")
-
