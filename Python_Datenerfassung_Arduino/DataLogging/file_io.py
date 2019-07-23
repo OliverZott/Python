@@ -22,15 +22,16 @@ file_headder = "Timestamp;Temperature;Humidity;Illuminance\n"
 
 
 # write data to file
-def file_io (temp, hum, lux):
+def file_io(temp, hum, lux):
     # get time for time stamp
     date = datetime.datetime.now().strftime("%Y-%m-%d")
     dateANDtime = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     
     # file name 
-    path = r'C:\Users\Dura\eclipse-workspace\Python\Projekt_1\Messwerte'   
+    # path = r'C:\Users\Dura\eclipse-workspace\Python\Projekt_1\Messwerte'
+    path = r'C:\Users\Dura\PycharmProjects\Python_Datenerfassung_Arduino\Messwerte'
     # file_name = "Messwerte_"  + date +".txt"
-    f_name = "Messwerte_"  + date +".txt"
+    f_name = "Messwerte_" + date + ".txt"
     file_name = os.path.join(path, f_name) 
 
     measurement = dateANDtime + ";" + temp + ";" +  hum + ";" + lux + "\n"
@@ -49,7 +50,7 @@ def file_io (temp, hum, lux):
 def filename():
     date = datetime.datetime.now().strftime("%Y-%m-%d")
     # path = r'C:\Users\Dura\eclipse-workspace\Python\Projekt_1\Messwerte'
-    f_name = "Messwerte_"  + date +".txt"
+    f_name = "Messwerte_" + date + ".txt"
     # file_name = os.path.join(path, f_name)
     
     return f_name 

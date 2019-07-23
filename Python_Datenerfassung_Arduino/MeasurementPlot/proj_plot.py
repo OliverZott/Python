@@ -1,4 +1,4 @@
-''' 
+"""
 proj_plot:      - plot from file with measured values
                 - 
 
@@ -10,8 +10,7 @@ TODO:           - WTF... plot size fucked up beyond believe
 @author: Oliver Zott
 
 https://matplotlib.org/3.1.0/tutorials/text/text_intro.html
-
-'''
+"""
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -20,16 +19,16 @@ import os
 
 def proj_plot(file_name):
     
-    path = r'C:\Users\Dura\eclipse-workspace\Python\Projekt_1\Messwerte' 
+    path = r'C:\Users\Dura\PycharmProjects\Python_Datenerfassung_Arduino\Messwerte'
     
     f = open(os.path.join(path, file_name), "r") 
     #f = open(file_name, "r")
     lines = f.readlines()[1:]               # ignore first line (header)
     
-    D = np.loadtxt(lines,delimiter=";",usecols=[0],dtype="str")
-    T = np.loadtxt(lines,delimiter=";",usecols=range(1,2))
-    H = np.loadtxt(lines,delimiter=";",usecols=range(2,3))
-    L = np.loadtxt(lines,delimiter=";",usecols=range(3,4))
+    D = np.loadtxt(lines, delimiter=";", usecols=[0], dtype="str")
+    T = np.loadtxt(lines, delimiter=";", usecols=range(1, 2))
+    H = np.loadtxt(lines, delimiter=";", usecols=range(2, 3))
+    L = np.loadtxt(lines, delimiter=";", usecols=range(3, 4))
 
     # define time array from numpy-ndarray 
     time_arr = np.array([])
