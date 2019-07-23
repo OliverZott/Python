@@ -7,6 +7,8 @@
 
 source:     https://docs.python.org/3/howto/descriptor.html
 
+Book page:  369 ("magic methods")
+
 Author:     Oliver Zott
 Date:       23.07.2019
 """
