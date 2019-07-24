@@ -3,6 +3,7 @@
 
 - object attribute with “binding behavior”
 - attribute access has been overridden by methods:  __get__(), __set__(), and __delete__()
+- implementation in terms of the descriptor protocol
 
 
 source:     https://docs.python.org/3/howto/descriptor.html
@@ -27,6 +28,9 @@ class RevealAccess(object):     # in Python (from version 3.x), object is root o
         print("Updating: ", self.name)
         return self.val
 
+    def __del__(self):
+        print("Destructor called, instance deleted!")
+
 
 class MyClass(object):
     x = RevealAccess(10, 'var "x"')
@@ -38,19 +42,27 @@ print("---------- To call instance from class MyClass: ----------")
 m = MyClass()
 print(">> print(m): ")
 print(m)
+print()
+
+print(">> m.x: ")
+m.x
+print()
 
 print(">> print(m.x): ")
 print(m.x)
+print()
 
 print(">> print(m.y): ")
 print(m.y)
+print()
 
 print(">> m.x = 15: ")
 m.x = 15
 print(">> print(m.x): ")
 print(m.x)
-
 print()
+
+
 print("---------- To call instance from class RevealAccess directly: ----------")   # NOT POSSIBLE!!!
 n = RevealAccess()
 print(">> print(n.val): ")
@@ -59,5 +71,8 @@ print(n.val)
 print(">> n.val = 12345: ")
 n.val = 12345
 
+del n
+
+print("---")
 print(">> print(n.val): ")
 print(n.val)

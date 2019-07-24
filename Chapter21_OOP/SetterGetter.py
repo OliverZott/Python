@@ -2,14 +2,14 @@
 Setter and Getter
 Book page 358
 
-Idea:           Restrict access to Class-Attributes by specific rules
-Alternative:    __get__ __set__
-
-Author: Oliver Zott
-Date: 23.07.2019
-
 https://docs.python.org/3/howto/descriptor.html#properties
 https://www.python-course.eu/python3_properties.php
+
+Idea:           Restrict access to Class-Attributes by specific rules
+Alternative:    __get__ __set__  -> Descriptor
+
+Author:     Oliver Zott
+Date:   23.07.2019
 """
 
 
@@ -41,22 +41,6 @@ class B:
         self._X = value
     XY = property(getx, setx)
 
-
-""" # Example not working
-class C:
-    def __init__(self):
-        self._Z = 123
-
-    def __get__(self, instance, owner):
-        print("__get__ called")
-        return self._Z
-
-    def __set__(self, instance, value):
-        print("__set__ called")
-        if value < 0:
-            return self._Z(instance)
-        self._Z = value
-"""
 
 # -----------------------------------------------------------------------------
 print("Setter & Getter:")
@@ -94,7 +78,7 @@ print("Class B WITH Property-Attribute:")
 b = B()
 print()
 
-print("Set instance b of class B with 'b.X = -214': ")
+print("Set instance b of class B with 'b.XY = -214 / b.XY = 215': ")
 b.XY = -214
 print(b.XY)
 print()
@@ -102,16 +86,3 @@ print()
 b.XY = 215
 bxy = b.XY
 print(bxy)
-
-"""
-# -----------------------------------------------------------------------------
-print("============================================")
-print("Class C with MagicFunctions __set__ & __get__")
-
-c = C()
-c.Z = 321
-print(c.Z)
-
-c.Z = -345
-print(c.Z)
-"""
