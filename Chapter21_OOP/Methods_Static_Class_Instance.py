@@ -16,3 +16,25 @@ Author:     Oliver Zott
 Date:       24.07.2019
 """
 
+
+class MyClass(object):
+
+    def method(self):
+        return 'instance method called', self
+
+    @classmethod
+    def classmethod(cls):
+        return 'class method called', cls
+
+    @staticmethod
+    def staticmethod():
+        return 'static method called'
+
+
+# ========================================================================================================
+# Examples
+
+m1 = MyClass()
+print(m1.method())
+print(m1.classmethod())
+print(m1.staticmethod())

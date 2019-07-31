@@ -3,7 +3,6 @@ Example for @property Decorator / using setter
 
 https://www.machinelearningplus.com/python/python-property/
 https://www.programiz.com/python-programming/property
-
 https://www.python-course.eu/python3_properties.php
 
 0.  Pythonic way to user set / get --> @property
@@ -16,7 +15,7 @@ https://www.python-course.eu/python3_properties.php
     Make an attribute as property by defining it as a function and
     add the @property decorator before the fn definition
 
-3.  @property lets a method to be accessed as an attribute instead of as a method with a '()'.
+3.  @property lets a method to be accessed as an attribute instead of as a method with funcftion call '()'.
 
 4.  When to define a setter method for the property?
     Typically, if you want to update the source attributes whenever the property is set.
@@ -24,6 +23,7 @@ https://www.python-course.eu/python3_properties.php
 
 source:     https://python-textbok.readthedocs.io/en/1.0/Classes.html#class-decorators
             https://python-textbok.readthedocs.io/en/1.0/Functions.html#decorators
+            https://www.programiz.com/python-programming/property
 
 Author:     Oliver Zott
 Date:       23.07.2019

@@ -72,7 +72,3 @@ print(">> n.val = 12345: ")
 n.val = 12345
 
 del n
-
-print("---")
-print(">> print(n.val): ")
-print(n.val)
