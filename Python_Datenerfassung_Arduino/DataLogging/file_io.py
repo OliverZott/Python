@@ -34,7 +34,7 @@ def file_io(temp, hum, lux):
     f_name = "Messwerte_" + date + ".txt"
     file_name = os.path.join(path, f_name) 
 
-    measurement = dateANDtime + ";" + temp + ";" +  hum + ";" + lux + "\n"
+    measurement = dateANDtime + ";" + temp + ";" + hum + ";" + lux + "\n"
     # file_name = "Messwerte_"  + date +".txt"
     file = open(file_name, "a")
 
