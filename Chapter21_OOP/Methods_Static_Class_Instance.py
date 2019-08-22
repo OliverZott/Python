@@ -10,6 +10,8 @@ source: https://realpython.com/instance-class-and-static-methods-demystified/
 
 -   Because static method is completely independent from the rest of the class it’s much easier to test.
 
+- 	When make method static? 
+
 Author:     Oliver Zott
 Date:       24.07.2019
 """
@@ -40,8 +42,11 @@ class MyClass(object):
     def staticmethod():     # static method
         """
         - neither self nor cls (but arbitrary other arguments)
-        - CANT modify object state or class state
+        - CANT modify object state or class state as they are not bound to it
         - restricted in what data they can access - and they’re primarily a way to namespace your methods.
+		- Static methods have a very clear use-case. When we need some functionality not w.r.t an Object but 
+			w.r.t the complete class, we make a method static.
+		- Very dvantageous when we need to create Utility methods as they aren’t tied to an object lifecycle usually
         """
         return 'static method called'
 

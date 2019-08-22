@@ -1,24 +1,20 @@
 """
-Design Pattern Example: MVC (Model View Controller)
+Design Pattern Example: MVC -  (Model View Controller)
 
-CRUD - persistent storage
-create
-read
-update
-delete
+goals:
+- CRUD - persistent storage
+- https://www.python-kurs.eu/lambda.php
+
 
 sources:
 - https://www.giacomodebidda.com/mvc-pattern-in-python-introduction-and-basicmodel/
-
 - https://www.hsg-kl.de/faecher/inf/python/oop/mvc/index.php
 - https://realpython.com/the-model-view-controller-mvc-paradigm-summarized-with-legos/
 
-
-TODO:
-- Error-Logging
-
 Oliver Zott
 21.08.2019
+
+TODO:   - Error-Logging
 """
 
 
@@ -74,7 +70,7 @@ def update_item(name, price, quantity):
 # delete
 def delete_item(name):
     global items
-    idxs_items = list(filter(lambda i_x: i_x[1]['name'] == name, enumerate(items)))
+    idxs_items = list(filter(lambda i_x: i_x[1]['name'] == name, enumerate(items)))  # WHY IS THIS WORKING ???
     if idxs_items:
         i, item_to_update = idxs_items[0][0], idxs_items[0][1]
         del items[i]
