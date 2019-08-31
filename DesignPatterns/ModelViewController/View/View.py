@@ -12,9 +12,9 @@ Version:    1.0
 from ModelViewController.Model import Person       # to make work shift+alt+F10 uncheck 2 PYPATH boxes
 
 
-def showAllView(list):
-    print(f'In our txt we have: {len(list)} persons. They are:')
-    for item in list:
+def showAllView(list_):  # underscore to avoid shadowing
+    print(f'In our txt we have: {len(list_)} persons. They are:')
+    for item in list_:
         print(item.name())
 
 

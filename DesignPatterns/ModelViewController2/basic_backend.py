@@ -1,5 +1,7 @@
 """
 Design Pattern Example: MVC -  (Model View Controller)
+BACKEND part of Project
+
 
 goals:
 - CRUD - persistent storage
@@ -53,7 +55,7 @@ def read_item(name):
 
 def read_items():
     global items
-    return (item for item in items)
+    return [item for item in items]
 
 
 # update
@@ -78,6 +80,7 @@ def delete_item(name):
         raise mvc_exc.ItemNotStored('Can\'t delete item "{}", because it\'s not stored'.format(name))
 
 
+# '''
 # ---------------------------------------------------------------------
 # testing with main:
 
@@ -101,6 +104,17 @@ def main():
     print("Update strawberry: ")
     update_item('strawberry', 0.12, 500)
     print(read_item('strawberry'))
+    print("Type: ", type(read_item('strawberry')))
+
+    print()
+    print("Read_Items - TEST -----------------")
+    print(read_items())
+    print("Type: ", type(read_items()))
+
+    print()
+    print("Enumerate(read_items()) - TEST -----------------")
+    print(enumerate(read_items()))
+    print(type(enumerate(read_items())))
 
     print()
     print("Delete apple: ")
@@ -112,3 +126,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+# '''
