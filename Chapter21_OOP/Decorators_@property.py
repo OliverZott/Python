@@ -36,6 +36,8 @@ class Person(object):
         self.last = lastname
         # self.fullname = self.firs + ' ' + self.last     # won't show correct full name after changing first or last!
 
+	# property decorator for getter-method also used!
+	
     @property       # fullname used as an attribute
     def fullname(self):
         """
