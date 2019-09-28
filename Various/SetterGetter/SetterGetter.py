@@ -14,7 +14,7 @@ class Shark(object):
     """
     class without setter/ getter
     """
-    type = "fish"   # class variable (for all clas objects the same)
+    type = "fish"   # class variable (for all class objects the same)
 
     def __init__(self, name: str = None, age: int = 0):
         self.name = name    # instance variables (each instance has different instance variables)
@@ -73,7 +73,7 @@ class Shark3(object):
     """
 
     def __init__(self):
-        self._name = "Shark3-insctance"
+        self._name = "Shark3-instance"
         self._age = "shark3-instance-age"
 
     def get_attr(self):

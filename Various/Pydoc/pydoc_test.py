@@ -37,4 +37,5 @@ if __name__ == "__main__":
 
     print(MyFunction.__doc__)
 
-    pydoc -w MyClass
+    # pydoc -w MyClass
+

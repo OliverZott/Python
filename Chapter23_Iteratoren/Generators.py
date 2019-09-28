@@ -2,7 +2,8 @@
 Chapter 23 - Iterators: Generators
 
 - Generator: want to iterate without creating a list with int (like range)
-- "list" or "for-print-loop" NEEDED TO SHOW ELEMENTS from generator --> Cause they are NOT STORED!!!
+- "list" or "for-print-loop" NEEDED, TO SHOW ELEMENTS from generator --> Cause they are NOT STORED!!!
+- Generator Expressions:
 
 Author: Oliver Zott
 Date: 20.09.2019
@@ -51,6 +52,13 @@ def names(trigger=True):
     if trigger:
         cnt_guys = yield from guys()
         print("{} guys: ".format(cnt_guys))
+
+
+# ------------------------------------------------------------------
+# Example 4: Generator-Expressions (page 413)
+print()
+print("Example 4:")
+print(sum((i*i for i in range(1, 11))))
 
 
 # ------------------------------------------------------------------

@@ -10,7 +10,6 @@ Update: 20.09.2019
 
 # ---------------------------------------------------
 # Example 1 (page 404)
-
 lst = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 lst_sq = [x**2 for x in lst]  # list comprehension
 print(lst_sq)

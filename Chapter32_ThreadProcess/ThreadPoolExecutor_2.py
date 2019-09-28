@@ -3,7 +3,7 @@ Example 2:
 Added context-manager to Example 1
 (source: book page 554)
 
--   no "shutdown" necessary due to "with" command
+-   no "shutdown" necessary due to "with" command (context manager)
 
 Author: Oliver Zott
 Date: 18.09.2019

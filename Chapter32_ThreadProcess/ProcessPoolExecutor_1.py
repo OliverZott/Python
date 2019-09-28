@@ -24,5 +24,4 @@ if __name__ == "__main__":
         e.submit(test, 5)
         e.submit(test, 6)
         print("All tasks started.")
-
-print("All tasks done.")
+    print("All tasks done.")

@@ -5,6 +5,7 @@ Executor and return values (Thread)
 
 Author: Oliver Zott
 Date: 19.09.2019
+Update: 24.09.2019
 """
 
 from concurrent import futures
@@ -48,7 +49,20 @@ if __name__ == "__main__":
     '''
 
     N = (12345678, 1234567, 123456, 12)
+
+    # ThreadPoolExecutor:
+    # - Class whose instances represent sets of threads
+    # - Implementing interface: Executor-Instance with methods: submit, map, shutdown
     with futures.ThreadPoolExecutor(max_workers=4) as e:
-        fs = {e.submit(approx_pi, n): n for n in N}
+        # Container (dict) of future-Instances "fs" initialized by dict-COMPREHENSION
+        fs = {e.submit(approx_pi, n): n for n in N}  # dictionary object
+        # "as_completed" creates ITERATOR, which iterates over CONTAINER "fs" of future-Instances
         for f in futures.as_completed(fs):
             print("n={:10}: {}".format(fs[f], f.result()))
+
+    with futures.ThreadPoolExecutor(max_workers=4) as e:
+        fs = {e.submit(approx_pi, n): n for n in N}
+        done = False
+        while not done:
+            res = futures.wait(fs, timeout=1.0)
+            for
