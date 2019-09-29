@@ -74,3 +74,4 @@ if __name__ == "__main__":
     print(issubclass(Triangle, Polygon))
     print()
     tri.comment()
+    # pol = Polygon()  # Can't instantiate abstract base class directly!

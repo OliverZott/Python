@@ -17,7 +17,7 @@ class AbstractClass(ABC):
 
     @abstractmethod
     def do_smth(self):
-        print("abstract class function")
+        print("abstract base-class function")
 
 
 class Child(AbstractClass):
