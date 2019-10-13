@@ -10,15 +10,13 @@ from util import input_func
 from util.cipher_func import cipher
 
 
-def main():
+def run():
 
     text, method, seed = input_func.input_function()
     print(cipher(text, method, seed))
 
-    '''
     print(__name__)
-    '''
 
 
 if __name__ == "__main__":
-    main()
+    run()

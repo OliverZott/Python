@@ -1,20 +1,19 @@
 """"
-Exercise 2.1: Caesar Cipher
+Exercise 02-01 a, b)
 
-ToDO:   - exceptions?
-        - input function separate?
-
-
-Author: Oliver Zott
-Date: 02.10.2019
+Author: Group 1
+Date: 10.10.2019
 """
 
 
-def caesar_cipher_encrypt(input, shift):
+# -------------------------------------------------------
+# Exercise 02-01 a)
+def caesar_cipher_encrypt(sentence, shift):
+    """ Function to encrypt a given sentence. """
 
     sentence_encrypted = ''
 
-    for i in input:
+    for i in sentence:
         if i.isupper():
             sentence_encrypted += chr((ord(i) - 65 + shift) % 26 + 65)
         elif i.islower():
@@ -24,11 +23,14 @@ def caesar_cipher_encrypt(input, shift):
     return sentence_encrypted
 
 
-def caesar_cipher_decrypt(input, shift):
+# -------------------------------------------------------
+# Exercise 02-01 b)
+def caesar_cipher_decrypt(sentence, shift):
+    """ Function to decrypt a given sentence. """
 
     sentence_decrypted = ''
 
-    for i in input:
+    for i in sentence:
         if i.isupper():
             sentence_decrypted += chr((ord(i) - 65 - shift) % 26 + 65)
         elif i.islower():
@@ -40,9 +42,8 @@ def caesar_cipher_decrypt(input, shift):
 
 # -------------------------------------------------------
 # Test:
-encr = caesar_cipher_encrypt("Hallo", 5)
-print(encr)
-decr = caesar_cipher_decrypt(encr, 5)
-print(decr)
-test_str1 = "Pbatenghyngvbaf, lbh unir fhpprrqrq va qrpelcgvat gur fgevat"
-print(caesar_cipher_decrypt(test_str1, 13))
+print(caesar_cipher_encrypt("aBcZ", 1))
+print(caesar_cipher_decrypt("Pbatenghyngvbaf, lbh unir fhpprrqrq va qrpelcgvat gur fgevat", 13))
+
+
+

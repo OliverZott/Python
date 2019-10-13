@@ -1,18 +1,15 @@
 """"
-Exercise 2.1: Caesar Cipher
+Exercise 02-01 c)
 
-
-ToDO:   - exceptions?
-        - input function separate?
-        - Gwc uivioml bw nqvl bpm zqopb apqnb.
-
-
-Author: Oliver Zott
-Date: 02.10.2019
+Author: Group 1
+Date: 10.10.2019
 """
 
 
+# -------------------------------------------------------
+# Exercise 02-01 c)
 def caesar_cipher_encrypt(input_text, shift):
+    """ Function to encrypt a given sentence. """
 
     sentence_encrypted = ''
 
@@ -27,6 +24,10 @@ def caesar_cipher_encrypt(input_text, shift):
 
 
 def caesar_cipher_decrypt():
+    """
+    Function to decrypt a sentence which is given by input.
+    A brute force method (iteration over alphabet) is used to find the unknown encryption-key.
+    """
 
     input_text = input("Please enter text to encrypt.")
 
@@ -45,7 +46,6 @@ def caesar_cipher_decrypt():
 
 # -------------------------------------------------------
 # Test:
-encr = caesar_cipher_encrypt("Hallo Weeeelt", 5)
-print(encr)
 
+# Gwc uivioml bw nqvl bpm zqopb apqnb
 caesar_cipher_decrypt()
