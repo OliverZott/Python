@@ -29,7 +29,7 @@ def caesar_cipher_decrypt():
     A brute force method (iteration over alphabet) is used to find the unknown encryption-key.
     """
 
-    input_text = input("Please enter text to encrypt.")
+    input_text = input("Please enter text to decrypt.")
 
     for j in range(0, 26, 1):
         sentence_decrypted = ''

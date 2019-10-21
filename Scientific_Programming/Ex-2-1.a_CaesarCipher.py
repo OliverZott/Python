@@ -8,7 +8,7 @@ Date: 10.10.2019
 
 # -------------------------------------------------------
 # Exercise 02-01 a)
-def caesar_cipher_encrypt(sentence, shift):
+def caesar_cipher_encrypt(sentence: str, shift: int):
     """ Function to encrypt a given sentence. """
 
     sentence_encrypted = ''
