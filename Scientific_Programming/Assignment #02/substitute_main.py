@@ -6,8 +6,8 @@ Version: 1.0
 Date: 08.10.2019
 """
 
-from util import input_func
-from util.cipher_func import cipher
+from .util import input_func
+from .util.cipher_func import cipher
 
 
 def run():

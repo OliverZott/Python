@@ -24,3 +24,7 @@ def input_function():
         method = input("Please press 'e' for encrypt or 'd' for decrypt.")
 
     return input_text, method, seed
+
+
+if __name__ == "__main__":
+    pass

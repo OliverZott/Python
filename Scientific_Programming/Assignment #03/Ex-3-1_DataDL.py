@@ -19,8 +19,8 @@ ToDo:   - Exception handling
         - import ir in sub-folder in PyCharm --> .util
 
 Example:    - file_dl(10, 45)
-            - python Ex-3-1_DataDL 9 44 11 44
-            - python Ex-3-1_DataDL 9 44 11 49
+            - python Ex-3-1_DataDL.py 9 44 11 44
+            - python Ex-3-1_DataDL.py 9 44 11 49
 
 Author: Oliver Zott
 Date: 20.10.2019
@@ -56,6 +56,7 @@ def download(longitude, latitude):
         else:
             urllib.request.urlretrieve(link, file_name)
             print(f"Done saving file '{file_name}' to directory {cwd}.")
+            print(file_size(link+file_name))
     else:
         raise Exception(f"Location '{cwd}' not valid! ")
 
@@ -174,6 +175,15 @@ def check_directory(cwd):
 
 def check_existence(file_name):
     return os.path.isfile(file_name)
+
+
+def file_size(file_name):
+    # stat_info = os.stat('file_name')
+    # stat_info.st_size
+
+    size = os.path.getsize(file_name)
+
+    return size
 
 
 if __name__ == "__main__":
