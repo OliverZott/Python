@@ -56,7 +56,7 @@ def download(longitude, latitude):
         else:
             urllib.request.urlretrieve(link, file_name)
             print(f"Done saving file '{file_name}' to directory {cwd}.")
-            print(file_size(link+file_name))
+            print("File size(byte): ", file_size(file_name))
     else:
         raise Exception(f"Location '{cwd}' not valid! ")
 
@@ -188,6 +188,7 @@ def file_size(file_name):
 
 if __name__ == "__main__":
     file_dl()
+    download(9, 46)
 
 # ---------------------------------------------------------
 # test
