@@ -8,6 +8,7 @@ Date: 16.07.2019
 Update: 20.09.2019
 """
 
+
 # ---------------------------------------------------
 # Example 1 (page 404)
 lst = [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -26,6 +27,7 @@ result = map(lambda y: y**2, ls)
 print(ls)
 print(list(result))
 print()
+
 
 # ---------------------------------------------------
 # Example 2 (page 405)
@@ -60,6 +62,7 @@ for i in range(3):
 print(u)
 print()
 
+
 # ---------------------------------------------------
 # Example 3 (page 406)
 print("Example 3: Dict-Comprehensions")
@@ -76,6 +79,7 @@ dict3 = {k: [k*i for i in lst3] for k in lst1}
 print(dict2)
 print(dict3)
 print()
+
 
 # ---------------------------------------------------
 # Example 4 (page 406)
