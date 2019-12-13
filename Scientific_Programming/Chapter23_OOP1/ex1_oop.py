@@ -32,15 +32,29 @@ class Cat:
         Method for cat-class
         """
         print('{}, says {} Cat'.format(self.speak, self.name))
+        print(f'{self.name} says {self.speak}')  # newer python format version
 
     # method 2
     def eat_food(self, food_kg):
         """
         function to feed cat
+        CAREFUL: function changes instance attribute during object lifetime
 
         @param food_kg: float
         """
         self.weight += food_kg
+
+    # attribute (property)
+    @property
+    def weight_lbs(self):
+        """
+        alternative versions (worse!):
+            - self.weight_lbs in __init__  BUT... what if cat eats food?  lbs not updated!
+            - write own get_ method  BUT... but hides fact, that it is still an attribute!
+
+        better: @property
+        """
+        return self.weight / 0.45359237
 
 
 if __name__ == "__main__":
@@ -58,8 +72,8 @@ if __name__ == "__main__":
     print(a == b)
 
     # 23.5  @property
-    print('Weight before eat: {:.1f} kg'.format(a.weight))  # formatting float
+    print('Weight before eat: {:.3f} kg'.format(a.weight))  # formatting float
     a.eat_food(0.2)
-    print('Weight after eat: {:5.1f} kg'.format(a.weight))
-
+    print('Weight after eat: {:12.1f} kg'.format(a.weight))
+    print(a.weight_lbs)
 
