@@ -15,9 +15,6 @@ source:
 
 
 class Cat:
-    """
-    First example: cat class
-    """
 
     # class-attribute
     cat_speak = 'Meow'
@@ -26,14 +23,11 @@ class Cat:
         # instance attributes
         self.name = name
         self.weight = weight
+        self.speak = None  # decided by _decide_speech method!
         self._language = None  # private attribute
         self.language = language
-        self.speak = None  # not yet clear what the cat says
 
     def say_name(self):
-        """
-        Method for cat-class
-        """
         print('{}, says {} Cat'.format(self.speak, self.name))
         print(f'{self.name} says {self.speak}')  # newer python format version
 
@@ -42,7 +36,6 @@ class Cat:
         Private method:
         used to structure code in our class
         :param value:
-        :return:
         """
         if value == 'en':
             self.speak = 'Meow'
@@ -53,7 +46,6 @@ class Cat:
         else:
             raise ValueError('Language not understood: {}'.format(value))
 
-
     def eat_food(self, food_kg):
         """
         function to feed cat
@@ -62,6 +54,17 @@ class Cat:
         @param food_kg: float
         """
         self.weight += food_kg
+
+    # Property getter
+    @property
+    def language(self):
+        return self._language
+
+    # Property setter
+    @language.setter
+    def language(self, value):
+        self._language = value
+        self._decide_speech(value)
 
     @property  # use method like it was attribute
     def weight_lbs(self):
@@ -74,6 +77,7 @@ class Cat:
         """
         return self.weight / 0.45359237
 
+    # property setter
     @weight_lbs.setter
     def weight_lbs(self, new_weight):
         """
@@ -85,6 +89,13 @@ class Cat:
 
 if __name__ == "__main__":
 
+    kosto = Cat("Kostolany", 4)
+    kosto.say_name()
+    kosto.language = 'fr'
+    print(kosto.language)
+    kosto.say_name()
+
+    """
     # 23.1 Some basics
     a = Cat('Grumpy', 4)
     print(a)  # created instance of CAT class
@@ -114,4 +125,6 @@ if __name__ == "__main__":
     print("c.weight: ", c.weight, "; c.weight_lbs:", c.weight_lbs)
     c.weight_lbs = 3
     print(c.weight, c.weight_lbs)
+    c.speak
+    """
 
