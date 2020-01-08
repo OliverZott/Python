@@ -2,7 +2,8 @@
 Chapter23 OOP: Example 1
 
 - __init__
--
+- @property
+- .setter
 
 
 source:
@@ -19,11 +20,15 @@ class Cat:
     """
 
     # class-attribute
-    speak = 'Meow'
+    cat_speak = 'Meow'
 
-    def __init__(self, name, weight):
+    def __init__(self, name, weight, language='en'):
+        # instance attributes
         self.name = name
         self.weight = weight
+        self._language = None  # private attribute
+        self.language = language
+        self.speak = None  # not yet clear what the cat says
 
     def say_name(self):
         """
@@ -31,6 +36,23 @@ class Cat:
         """
         print('{}, says {} Cat'.format(self.speak, self.name))
         print(f'{self.name} says {self.speak}')  # newer python format version
+
+    def _decide_speech(self, value):
+        """
+        Private method:
+        used to structure code in our class
+        :param value:
+        :return:
+        """
+        if value == 'en':
+            self.speak = 'Meow'
+        elif value == 'fr':
+            self.speak = 'Miaou'
+        elif value == 'de':
+            self.speak = 'Moin Moin!'
+        else:
+            raise ValueError('Language not understood: {}'.format(value))
+
 
     def eat_food(self, food_kg):
         """
@@ -69,13 +91,14 @@ if __name__ == "__main__":
     print(isinstance(a, Cat))
     print(type(Cat))
     print(type(a))
-    print(a.say_name())
+    a.say_name()
 
     b = Cat('Grumpy', 4)
     print(a is b)
     print(a == b)
 
     # 23.5  @property
+    print("\n@property example: ")
     print('Weight before eat: {:.3f} kg'.format(a.weight))  # formatting float
     a.eat_food(0.2)
     print('Weight after eat: {:12.1f} kg'.format(a.weight))
@@ -88,7 +111,7 @@ if __name__ == "__main__":
     '''
     c = Cat('Kosto', 5)
     c.eat_food(0.4)
-    print(c.weight, c.weight_lbs)
+    print("c.weight: ", c.weight, "; c.weight_lbs:", c.weight_lbs)
     c.weight_lbs = 3
     print(c.weight, c.weight_lbs)
 
