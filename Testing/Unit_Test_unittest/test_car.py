@@ -12,13 +12,13 @@ author: Oliver Zott
 
 from unittest import TestCase
 
-from Unit_Test_unittest.Car import Car
+from Testing import Unit_Test_unittest
 
 
 class TestCar(TestCase):
 
     def setUp(self):
-        self.car = Car()
+        self.car = Unit_Test_unittest.Car.Car()
 
 
 class TestInit(TestCar):
