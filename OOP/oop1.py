@@ -22,10 +22,17 @@ class Employee:
         # self.pay *= Employee.raise_amount   # to use the class raise-amount
         self.pay *= self.raise_amount   # to use the class raise-amount of then instance!?
 
-    """ Static method """
+    """ Class method """
     @classmethod
     def set_raise_amount(cls, amount):
         cls.raise_amount = amount
+
+    """ Static method """
+    @staticmethod
+    def is_workday(day):
+        if day.weekday() in {5, 6}:
+            return False
+        return True
 
 
 if __name__ == "__main__":
@@ -33,8 +40,15 @@ if __name__ == "__main__":
     emp_1 = Employee('Olli', 'Zott', 47000)
     emp_2 = Employee('Lena', 'Bergmann', 52000)
 
-    # -------------------------- Static and instance methods --------------------------
-    Employee.set_raise_amount(1.05)     # same as Employ.raise_amount = 1.05
+    # -------------------------- Static methods --------------------------
+    import datetime
+    my_date = datetime.date(2021, 5, 21)
+    
+    print(Employee.is_workday(my_date))
+
+
+    # -------------------------- Class and instance methods --------------------------
+    # Employee.set_raise_amount(1.05)     # same as Employ.raise_amount = 1.05
 
     # -------------------------- Call and Use class variables --------------------------
 
@@ -47,8 +61,8 @@ if __name__ == "__main__":
     """ found raise_amount on own namespace !!! """
     print(emp_1.raise_amount)
     """ no raise_amount in own namespace --> so it uses that from class """
-    print(emp_2.raise_amount)
-    print(Employee.raise_amount)
+    # print(emp_2.raise_amount)
+    # print(Employee.raise_amount)
 
     # print(emp_1.pay)
     # emp_1.apply_raise()
