@@ -14,6 +14,9 @@ class Employee:
         return super().__str__() + ' / Name: ' + self.first_name + ' / E-Mail: ' + self.email
 
     def show_fullname(self):
+        """
+        Instance method example
+        """
         return '{} {}'.format(self.first_name, self.last_name)
 
     def apply_raise(self):
