@@ -3,6 +3,7 @@ class Employee:
     def __init__(self, first, last) -> None:
         self.first = first
         self.last = last
+        # self.email = '{}.{}@mail.com'.format(self.first, self.last)
 
     @property
     def email(self):
@@ -28,7 +29,9 @@ class Employee:
 if __name__ == "__main__":
 
     emp_1 = Employee('John', 'Smith')
+    print(emp_1.email)
     emp_1.first = 'Jim'
+    print(emp_1.email)
     emp_1.fullname = 'Olli Zott'
 
     print(emp_1.first)
