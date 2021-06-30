@@ -136,3 +136,6 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+# OZ (2021-06-30) Add Pycharm 
+.idea
