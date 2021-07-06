@@ -1,4 +1,4 @@
-# behaviour I want to implement  ->  write some __ functions __
+# behavior I want to implement  ->  write some __ functions __
 # top level function or top level syntax  ->  corresponding __ (dunder methods)
 #   x + y   ->  __add__
 #   init x  ->  __init__
@@ -17,7 +17,7 @@ class Polynomial:
 
     def __len__(self):
         '''
-        len is rpresentation of degree 
+        len is representation of degree 
         '''
         return len(self.coeffs)
 
