@@ -7,6 +7,7 @@
 # Step by step
 
 ### Setup **Virtual Env**
+
 - `sudo apt install python3.8-venv` (if necessary)
 - `python -m venv venv`
 - `source ./venv/bin/activate`
@@ -14,7 +15,17 @@
 
 
 ### Install packages
-   - **oggm**
-   - dependencies (**pandas**, ...)
-2. Git versioning
-3. First tutorial example
+
+   - dependencies (**pandas**, ...)  
+     `pip install numpy scipy pandas shapely matplotlib pyproj \
+    rasterio Pillow geopandas netcdf4 scikit-image configobj joblib \
+    xarray progressbar2 pytest motionless dask bottleneck toolz descartes \
+    tables`
+
+  - **oggm**  
+    `pip install oggm`
+
+
+### Git versioning
+
+### First tutorial example
