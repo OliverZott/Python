@@ -1,8 +1,20 @@
 """An example Python module."""
 
-from types import List
+from typing import List
 
 
 def total(xs: List[float]) -> float:
     """Returns the sum of xs."""
-    return -1.0
+
+    temp = 0
+
+    for x in xs:
+        temp += x
+
+    return temp
+
+
+if __name__ == "__main__":
+
+    print(total([1, 2, 3]))
+    print(total([]))
