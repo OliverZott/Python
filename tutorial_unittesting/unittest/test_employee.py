@@ -1,7 +1,5 @@
 import unittest
 from unittest.mock import patch
-
-# import employee
 from employee import Developer, Employee
 
 

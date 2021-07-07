@@ -1,6 +1,5 @@
 import unittest
 import calc
-# from ..example1 import calc
 import sys
 
 # print(sys.path)
