@@ -16,7 +16,6 @@ Date: 04.10.2019
 import itertools
 import math
 
-
 # ============= SOLUTION =================================================================
 def isPrime(x):
     if x <= 1:
