@@ -5,7 +5,6 @@ Author: Oliver Zott
 Date: 20.09.2019
 """
 
-# imports for example 3
 import contextlib
 import time
 
@@ -70,8 +69,6 @@ def laufzeit():
         print("Laufzeit: {:.2f}  s".format(time.perf_counter() - start))
 
 
-# -------------------------------------------------------
-# Test: MAIN
 if __name__ == "__main__":
 
     # Example 3
