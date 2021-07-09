@@ -20,6 +20,8 @@ https://trello.com/c/K7f5Imup/14-logging
 ------------------------------------------------------------------------------------
 # Remarks
 
+- In format, the name `root` means the **root logger**
+
 ### Basics
 
 - Setup
