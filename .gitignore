@@ -140,3 +140,4 @@ cython_debug/
 # OZ (2021-06-30) Add Pycharm 
 .idea
 .vscode
+*.txt
