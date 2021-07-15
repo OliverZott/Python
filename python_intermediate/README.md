@@ -5,7 +5,7 @@ https://www.youtube.com/watch?v=eiDyK_ofPPM&list=PLC0nd42SBTaNuP4iB4L6SJlMaHE71F
 
 
 ------------------------------------------------------------------
-# Cohesion and coupling
+# Cohesion and Coupling
 https://www.youtube.com/watch?v=eiDyK_ofPPM
 
 - Look where the information is stored and decide how to split up 
@@ -14,7 +14,9 @@ https://www.youtube.com/watch?v=eiDyK_ofPPM
 
 
 ------------------------------------------------------------------
-# Cohesion and coupling
+# Dependency Inversion
+- Seperate components, reduces coupling in code
+- Inject abstract classes instead of specific implementations
 - ABC module
 - Type hints: only for developer... interpreter doesnt do typechecking --> use Pycheck for typechecking!
 
