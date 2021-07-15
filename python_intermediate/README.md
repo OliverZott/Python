@@ -15,10 +15,22 @@ https://www.youtube.com/watch?v=eiDyK_ofPPM
 
 ------------------------------------------------------------------
 # Dependency Inversion
+https://www.youtube.com/watch?v=Kv5jhbSkqLE&list=PLC0nd42SBTaNuP4iB4L6SJlMaHE71FG6N&index=3
+
 - Seperate components, reduces coupling in code
 - Inject abstract classes instead of specific implementations
 - ABC module
 - Type hints: only for developer... interpreter doesnt do typechecking --> use Pycheck for typechecking!
+
+
+
+
+
+------------------------------------------------------------------
+# Strategy Pattern
+https://www.youtube.com/watch?v=WQ8bNdxREHU&list=PLC0nd42SBTaNuP4iB4L6SJlMaHE71FG6N&index=3
+
+
 
 
  
