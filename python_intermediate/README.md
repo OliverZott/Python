@@ -15,7 +15,8 @@ https://www.youtube.com/watch?v=eiDyK_ofPPM
 
 ------------------------------------------------------------------
 # Cohesion and coupling
-https://www.youtube.com/watch?v=eiDyK_ofPPM
+- ABC module
+- Type hints: only for developer... interpreter doesnt do typechecking --> use Pycheck for typechecking!
 
 
  
