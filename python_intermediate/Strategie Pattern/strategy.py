@@ -2,6 +2,7 @@ import string
 import random
 from typing import List
 from enum import Enum
+from abc import ABC, abstractmethod
 
 
 def generate_id(length=8):
@@ -26,23 +27,51 @@ class SupportTicket:
         self.issue = issue
 
 
+class TicketOrderingStrategy(ABC):
+    @abstractmethod
+    def create_ordering(self, list: List[SupportTicket]) -> List[SupportTicket]:
+        pass
+
+
+class FIFOOrderingStrategy(TicketOrderingStrategy):
+    def create_ordering(self, list: List[SupportTicket]) -> List[SupportTicket]:
+        return list.copy()
+
+
+# Alternativly use revered(list) for iterator instead reversing the whole list!
+class FILOOrderingStrategy(TicketOrderingStrategy):
+    def create_ordering(self, list: List[SupportTicket]) -> List[SupportTicket]:
+        list_copy = list.copy()
+        list_copy.reverse()
+        return list_copy
+
+class RandomOrderingStrategy(TicketOrderingStrategy):
+    def create_ordering(self, list: List[SupportTicket]) -> List[SupportTicket]:
+        list_copy = list.copy()
+        random.shuffle(list_copy)
+        return list_copy
+
+
 class CustomerSupport:
     tickets: List[SupportTicket] = []
 
     def create_ticket(self, customer: str, issue: str):
         self.tickets.append(SupportTicket(customer, issue))
 
-    def process_tickets(self, processing_strategy: str = "fifo") -> None:
+    def process_tickets(self, processing_strategy: TicketOrderingStrategy = FILOOrderingStrategy) -> None:
         if len(self.tickets) == 0:
             print("No tickets to process.")
             return
 
-        # Use switch-case instead maybe
-        if processing_strategy == Strategy.FIFO:
+
+        for ticket in processing_strategy.create_ordering(self.tickets):
+            self.process_ticket(ticket)
+
+        if processing_strategy is FILOOrderingStrategy:
             for ticket in self.tickets:
                 self.process_ticket(ticket)
         elif processing_strategy == Strategy.FILO:
-            for ticket in reversed(self.tickets):
+            for ticket in reversed(self.tickets):   # used reversed iterator
                 self.process_ticket(ticket)
         elif processing_strategy == Strategy.RND:
             list_copy = self.tickets.copy()
@@ -50,7 +79,7 @@ class CustomerSupport:
             for ticket in list_copy:
                 self.process_ticket(ticket)
         else:
-            raise Exception("Invalid processingstrategy!")
+            raise Exception("Invalid processing strategy!")
 
     @staticmethod
     def process_ticket(ticket: SupportTicket):
@@ -59,7 +88,6 @@ class CustomerSupport:
 
 
 if __name__ == "__main__":
-
     cst = CustomerSupport()
     cst.create_ticket("Olli", "ticket nr 1")
     cst.create_ticket("Olli", "ticket nr 2")
