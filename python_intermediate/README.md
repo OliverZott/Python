@@ -29,8 +29,22 @@ https://www.youtube.com/watch?v=Kv5jhbSkqLE&list=PLC0nd42SBTaNuP4iB4L6SJlMaHE71F
 # Strategy Pattern
 https://www.youtube.com/watch?v=WQ8bNdxREHU&list=PLC0nd42SBTaNuP4iB4L6SJlMaHE71FG6N&index=3
 
-- Problem: low cohesion
+### Problem
+
+- Problem: low cohesion / high coupling
 - lot of if-else to implement various similar methods to process ticket
+
+### Solution
+
+- Extract functionality into separat base-sub classes with specific tasks
+
+### Simplification
+
+- Use lambda expressions (functional programming) directly
+
+### Open Questions
+
+- Use dependency injection if not using lambdas?
 
 
  
