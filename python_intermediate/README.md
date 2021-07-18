@@ -85,9 +85,13 @@ https://www.youtube.com/watch?v=oNalXg67XEE&list=PLC0nd42SBTaNuP4iB4L6SJlMaHE71F
 # Unit Testing & Code Coverage
 https://www.youtube.com/watch?v=jmP3fp_BhmE
 
-
-
+- `pip install coverage`
+- `coverage run .\05-unit-testing\test_vehicle_info.py`
+- `coverage html`
  
+# Remark
+- Test must be deterministic (no random stuff)!
+- 100% coverage percentage doesn't mean it's bug-free!
 
 ------------------------------------------------------------------
 # Various
