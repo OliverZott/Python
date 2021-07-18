@@ -47,6 +47,46 @@ https://www.youtube.com/watch?v=WQ8bNdxREHU&list=PLC0nd42SBTaNuP4iB4L6SJlMaHE71F
 - Use dependency injection if not using lambdas?
 
 
+
+
+
+------------------------------------------------------------------
+# Observer Pattern
+https://www.youtube.com/watch?v=oNalXg67XEE&list=PLC0nd42SBTaNuP4iB4L6SJlMaHE71FG6N&index=5
+
+### Problem
+
+- Problem: low cohesion / high coupling
+- Lot of "send_mail" functions in several parts ot the code
+
+### Solution
+- Fire events and have the Handlers defined seperatly
+
+### Step-by-step
+- **Main**
+  - Setup event handlers: `setup_eventblub_handlers()`
+  - Call functions and do stuff
+- **Event Class** 
+  - subbscribers collelction dictionary: `event -> handler`
+  - Function to subsricbe handler to an event: `subscribe(event, handler)`
+  - Function to post events: `post_event(event, data)`
+- **Listener** Class
+  - Setup function to register/subscribe handlers to events:       
+    `setup_log_event_handlers()`
+  - Handler functions: `handle_user registered_event()`
+- **Business Logic**
+  - Publishing event by using the event-class method `post_event(specific_event, data)`
+
+
+
+
+
+------------------------------------------------------------------
+# Unit Testing & Code Coverage
+https://www.youtube.com/watch?v=jmP3fp_BhmE
+
+
+
  
 
 ------------------------------------------------------------------
