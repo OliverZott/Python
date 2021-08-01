@@ -5,7 +5,7 @@ https://www.youtube.com/watch?v=eiDyK_ofPPM&list=PLC0nd42SBTaNuP4iB4L6SJlMaHE71F
 
 
 ------------------------------------------------------------------
-# Cohesion and Coupling
+# 01 - Cohesion and Coupling
 https://www.youtube.com/watch?v=eiDyK_ofPPM
 
 - Look where the information is stored and decide how to split up 
@@ -14,7 +14,7 @@ https://www.youtube.com/watch?v=eiDyK_ofPPM
 
 
 ------------------------------------------------------------------
-# Dependency Inversion
+# 02 - Dependency Inversion
 https://www.youtube.com/watch?v=Kv5jhbSkqLE&list=PLC0nd42SBTaNuP4iB4L6SJlMaHE71FG6N&index=3
 
 - Seperate components, reduces coupling in code
@@ -26,7 +26,7 @@ https://www.youtube.com/watch?v=Kv5jhbSkqLE&list=PLC0nd42SBTaNuP4iB4L6SJlMaHE71F
 
 
 ------------------------------------------------------------------
-# Strategy Pattern
+# 03 - Strategy Pattern
 https://www.youtube.com/watch?v=WQ8bNdxREHU&list=PLC0nd42SBTaNuP4iB4L6SJlMaHE71FG6N&index=3
 
 ### Problem
@@ -51,7 +51,7 @@ https://www.youtube.com/watch?v=WQ8bNdxREHU&list=PLC0nd42SBTaNuP4iB4L6SJlMaHE71F
 
 
 ------------------------------------------------------------------
-# Observer Pattern
+# 04 - Observer Pattern
 https://www.youtube.com/watch?v=oNalXg67XEE&list=PLC0nd42SBTaNuP4iB4L6SJlMaHE71FG6N&index=5
 
 ### Problem
@@ -82,7 +82,7 @@ https://www.youtube.com/watch?v=oNalXg67XEE&list=PLC0nd42SBTaNuP4iB4L6SJlMaHE71F
 
 
 ------------------------------------------------------------------
-# Unit Testing & Code Coverage
+# 05 - Unit Testing & Code Coverage
 https://www.youtube.com/watch?v=jmP3fp_BhmE
 
 - `pip install coverage`
@@ -92,6 +92,44 @@ https://www.youtube.com/watch?v=jmP3fp_BhmE
 # Remark
 - Test must be deterministic (no random stuff)!
 - 100% coverage percentage doesn't mean it's bug-free!
+
+
+
+
+
+------------------------------------------------------------------
+# 06 - Template & Bridge Pattern
+https://www.youtube.com/watch?v=t0mCrXHsLbI
+
+
+
+
+
+
+
+
+------------------------------------------------------------------
+# Code Smells
+
+
+
+
+
+------------------------------------------------------------------
+# Data Classes
+
+- class that provide **behavior** vs class that act as **contaier** for data structure 
+- class that are used as **data container** mostly used in a specific way
+- In C# **struct** is much like class but more oriented as a data structure
+
+### Remrks
+- Make comparabel by `order=True`
+- Make immutable `frozen=True`  -->  but use `object.__setattr__(self, 'sort_index', self.age)` for order now
+
+
+
+
+
 
 ------------------------------------------------------------------
 # Various
