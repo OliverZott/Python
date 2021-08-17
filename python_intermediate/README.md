@@ -118,6 +118,7 @@ https://www.youtube.com/watch?v=t0mCrXHsLbI
 ------------------------------------------------------------------
 # Data Classes
 
+- since python 3.7
 - class that provide **behavior** vs class that act as **contaier** for data structure 
 - class that are used as **data container** mostly used in a specific way
 - In C# **struct** is much like class but more oriented as a data structure

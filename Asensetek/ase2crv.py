@@ -24,10 +24,10 @@ def ase2crv(file: str, outfile: str):
                                                  e.filename))
 
     # separate values using regex
-    data_front = re.split(r"\"spectrumPoints\":\[", raw_str)  # split at front
-    data_end = re.split(r"\],\"radarPoints", data_front[1])  # split at end
+    data_front = re.split(r'"spectrumPoints":\[', raw_str)  # split at front
+    data_end = re.split(r'\],"radarPoints', data_front[1])  # split at end
     data = data_end[0]
-    data_list = re.split(",", data)
+    data_list = re.split(',', data)
 
     # create numpy array
     arr = np.zeros((401, 2))
