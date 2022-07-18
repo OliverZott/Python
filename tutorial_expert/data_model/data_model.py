@@ -1,5 +1,5 @@
-# behavior I want to implement  ->  write some __ functions __
-# top level function or top level syntax  ->  corresponding __ (dunder methods)
+# behavior I want to implement  ->  write some __ functions __  (data model methods / dunder-methods )
+# top level function or top level syntax  ->  corresponding __ (dunder method)
 #   x + y   ->  __add__
 #   init x  ->  __init__
 #   repr(x) ->  __repr__
@@ -28,6 +28,9 @@ if __name__ == "__main__":
     p2 = Polynomial(3, 4, 2)    # 3x^2 + 4x + 2
     p3 = Polynomial(7, 2, 5, 3)    # 7x^3 + 2x^2 + 5x + 3
 
-    print(repr(p1))
-    print(repr(p1 + p2))
+    print("p1: " + repr(p1))
+    print(p1)
+    print("p2: " + repr(p2))
+    print("p1 + p2: " + repr(p1 + p2))
+    print(p1 + p2)
     print(len(p3))
