@@ -1,9 +1,8 @@
 import logging
 
-
-logging.basicConfig(filename='./log.txt', level=logging.DEBUG,
-                    format='%(asctime)s: %(levelname)s: %(message)s')
-
+# https://docs.python.org/3/library/logging.html#logrecord-attributes
+logging.basicConfig(filename='./sample_log.log', level=logging.DEBUG,
+                    format='%(asctime)s: %(name)s :%(levelname)s: %(message)s')
 
 
 def add(x, y):
@@ -23,7 +22,13 @@ def multiply(x, y):
 
 def divide(x, y):
     """Divide function"""
-    return x/y
+    try:
+        result = x/y
+    except ZeroDivisionError:
+        logging.error('Division by zero!')
+        logging.exception('Division by zero!')
+    else:
+        return result
 
 
 num1 = 2
