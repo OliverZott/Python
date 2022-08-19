@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "name": "Mountainbikeeeee",
+    "tags": [
+      "Downhill",
+      "Road-bike"
+    ],
+    "description": "General mtb channel with lot of cool content"
+  },
+  {
+    "id": "2",
+    "name": "Programming",
+    "tags": [
+      "C++",
+      "Haskell"
+    ],
+    "description": "Software development and programming trainings."
+  }
+]
