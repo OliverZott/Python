@@ -1,5 +1,5 @@
 from dash import Dash, html
-from . import nation_dropdown
+from . import nation_dropdown, bar_chart
 
 
 def create_layout(app: Dash) -> html.Div:
@@ -13,6 +13,7 @@ def create_layout(app: Dash) -> html.Div:
                 children=[
                     nation_dropdown.render(app)
                 ]
-            )
+            ),
+            bar_chart.render(app)
         ],
     )
