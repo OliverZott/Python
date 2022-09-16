@@ -9,7 +9,7 @@ def render(app: Dash) -> html.Div:
     all_nations = ["South Korea", "China", "Canada"]
 
     @app.callback(
-        Output(ids.NATION_DROPDOWN, "value"),
+        Output(component_id=ids.NATION_DROPDOWN, component_property="value"),
         Input(ids.SELECT_ALL_NATIONS, "n_clicks")
     )
     def select_all_nations(_: int) -> list[str]:
