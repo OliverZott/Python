@@ -34,7 +34,7 @@
 
 - Stop and Delete container
 - make changes to code
-- build image (faste because / run contianer
+- build image (faste because / run container
 
 #### Automated - Docker Compose
 
@@ -44,17 +44,17 @@
 
 - `docker-compose up --build`
   - up ... for syncing and server start
-  - --build ... to build contianer the first time
+  - --build ... to build container the first time
 
 ## Docker commands
 
 - `docker image ls`
-- `docker  ps` = `docker contianer ls`
+- `docker  ps` = `docker container ls`
 - `docker ps -a` ...show all (also not running)
 - `docker run name/id`
 - `docker stop name/id`
 
-- Remove contianer and image (remove container before image)
+- Remove container and image (remove container before image)
   - `docker container rm name/id` or `docker rm name/id`
   - `docker image rm name/id` or `docker rmi name/id`
 
