@@ -24,11 +24,11 @@ deactivate env
 
 install packages with activated env and check
 
-````bash
+```bash
 pip install --upgrade -r ./environment/requirements.txt
 pip list
 pip freeze > pip_list.txt   (to freeze current state)
-````
+```
 
 or  
 `python -m pip install -r ./environment/requirements.txt`

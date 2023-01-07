@@ -12,7 +12,7 @@ https://www.youtube.com/watch?v=TFa38ONq5PY
 
 
 from datetime import datetime
-import time
+# import time
 from pytz import timezone
 
 
@@ -24,7 +24,9 @@ def main():
 
     some_time1 = datetime.fromisoformat("2022-11-05T13:23:53Z")
     some_time2 = datetime(2022, 11, 5, 13, 23, 23)
+    now = datetime.now()
 
+    print(now)
     print(some_time1.__str__())
     print(some_time1.__repr__())
     print(f"{some_time2}")

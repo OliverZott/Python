@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    container_name: channel-api-new
+    command: uvicorn main:app --host 0.0.0.0 --port 80 --reload --reload-include * # using watchfiles lib for --reload-include
+    ports:
+      - 8080:80
+    volumes:
+      - .:/app # mapping between folders for synchronizing  local:docker

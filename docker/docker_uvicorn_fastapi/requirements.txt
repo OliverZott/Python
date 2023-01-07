@@ -1,3 +1,5 @@
+autopep8
+pydantic
 fastapi
 pydantic
 uvicorn

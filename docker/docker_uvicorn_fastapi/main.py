@@ -26,7 +26,7 @@ with open("channels.json", encoding="utf8") as file:
 
 @app.get("/")
 def read_root() -> Response:
-    return Response("The server is running =)")
+    return Response("The server is running and watchfile is working?! =)")
 
 
 @app.get("/channels/{channel_id}", response_model=Channel)
@@ -47,4 +47,4 @@ def intro(**data):
 if __name__ == "__main__":
     intro(Firstname="Jane", Lastname="Doe", Age=22, Phone=1234567890)
     intro(arg1=24)
-"""
+#"""
