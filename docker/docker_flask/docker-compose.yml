@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    image: flask_startrek_image
+    container_name: flask_startrek_new
+    environment:
+      - FLASK_APP_NAME=Pille
+    ports:
+      - 4666:8080
