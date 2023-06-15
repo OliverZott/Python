@@ -14,12 +14,14 @@ activate env
 
 ```bash
 .\venv\Scripts\activate
+. venv/bin/activate
 ```
 
 deactivate env
 
 ```bash
 .\venv\Scripts\deactivate
+deactivate venv
 ```
 
 install packages with activated env and check
@@ -35,6 +37,9 @@ or
 
 Upgrade:
 `pip install --upgrade --force-reinstall -r requirements.txt`
+
+If tkinter error:
+`sudo apt install python3-tk`
 
 ## Run
 
