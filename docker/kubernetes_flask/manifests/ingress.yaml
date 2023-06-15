@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: oz-ingress
+  annotations:
+    # don't redirect to https since we don't use ssl
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    # rewrite rules so your application works
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  ingressClassName: nginx # this has to be the same for each ingress
+  rules:
+    - http:
+        paths:
+          - path: /oz-ingress(/|$)(.*) # the (/|$)(.*) is important (it's to rewrite all your content to the root of your app)
+            pathType: Prefix
+            backend:
+              service:
+                name: oz-service
+                port:
+                  number: 80 # the port your service (not pod) is listening to
+

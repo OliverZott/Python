@@ -1,3 +1,4 @@
+import json
 import os
 from flask import Flask, render_template
 
@@ -23,7 +24,7 @@ def main():
 
 @app.route("/hello")
 def hello():
-    return "<p>Hello, from my little docker app :)</p>"
+    return json.dumps({"name": env_var_value})
 
 
 if __name__ == "__main__":

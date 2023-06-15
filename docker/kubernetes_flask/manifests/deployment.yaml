@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: oz-deployment
+  labels:
+    app: oliver-zott-sample
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: oliver-zott-sample
+  template:
+    metadata:
+      labels:
+        app: oliver-zott-sample
+    spec:
+      nodeSelector:
+        "kubernetes.io/os": linux
+      containers:
+        - name: oliver-zott-app
+          image: techexchangeregistry.azurecr.io/oz-app:latest
+          ports:
+            - containerPort: 8080
+          imagePullPolicy: Always
+          env:
+            - name: FLASK_APP_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: oz-secret
+                  key: secretName
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: oz-service
+spec:
+  selector:
+    app: oliver-zott-sample
+  ports:
+    - protocol: TCP
+      name: http
+      port: 80
+      targetPort: 8080

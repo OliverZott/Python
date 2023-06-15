@@ -1,5 +1,34 @@
 # Flask Minimum web-api example
 
+# Kubernetes
+
+- generate docker image with env-var
+- push image to registry
+  - `docker push techexchangeregistry.azurecr.io/oliver_zott_app`
+  - `kubectl get pods`
+- create secret
+  - `kubectl apply -f .\manifests\secret.yaml`
+- create deployment
+  - `kubectl apply -f .\manifests\deployment.yaml`
+- create service and/or add service to deployment.yaml
+  - `kubectl apply -f .\manifests\deployment.yaml`
+  - `kubectl get services`
+  - `kubectl get service oz-service -o yaml`
+- create and push ingress
+  - `kubectl apply -f .\manifests\ingress.yaml`
+  - `kubectl get ingress` and add path defined in ingress.yaml
+  - <http://20.79.235.197/oz-ingress>
+  - <http://20.79.235.197/oz-ingress/hello>
+
+## Commands
+
+- `kubectl config get-contexts`
+- `kubectl get pods`
+- `ubectl logs <POD-NAME>`
+- `kubectl get deployments`
+- `kubectl get deployment oz-deployment -o yaml`
+- `kubectl describe deployment <DEPLOYMENT-NAME>`
+
 # Local execution
 
 ## Create Environment
@@ -12,6 +41,7 @@
 - Activate env:
   - windows: `.\venv\Scripts\activate`
   - linux: `. venv/bin/activate`
+- `python.exe -m pip install --upgrade pip`
 - `pip install --upgrade -r env.txt` or `pip install Flask`
 - in IDE: select python.exe from venv dir!! (`\venv\Scripts\python.exe`)
 
