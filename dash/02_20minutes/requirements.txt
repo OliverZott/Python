@@ -1,0 +1,5 @@
+autopep8
+dash
+jupyter-dash
+pandas
+dash_bootstrap_components

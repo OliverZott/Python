@@ -1,0 +1,4 @@
+autopep8
+dash
+jupyter-dash
+pandas
