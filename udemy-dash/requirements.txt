@@ -2,6 +2,7 @@ ipython
 ipykernel
 numpy
 pandas
+plotly
 
 
 
