@@ -1,6 +1,7 @@
-pip
 ipython
 ipykernel
+numpy
+pandas
 
 
 
