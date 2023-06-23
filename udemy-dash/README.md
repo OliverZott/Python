@@ -34,3 +34,10 @@ pip install --upgrade --force-reinstall -r requirements.txt
 - **plotly.graph_objs** vs **plotly.express**:
   - plotly.graph_objs provides a more low-level and flexible way to create figures while plotly.express provides a more concise and consistent way to create common figures.
   - plotly.express is a high-level wrapper for plotly.graph_objs which itself is a low-level library for drawing figures. plotly.express is to plotly.graph_objs what seaborn is to matplotlib.
+
+## Usefull in VS Code
+
+- install Autopep8 extension
+- create settings file
+- format on save enable
+- format notebook enable
