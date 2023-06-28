@@ -3,8 +3,8 @@ ipykernel
 numpy
 pandas
 plotly
-
-
+kaleido # to export static plotly images
+scipy
 
 # Course Original Requirements
 # alabaster
