@@ -12,6 +12,16 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "justMyCode": true
-        }
+        }, 
+        {
+            "name": "Python: Command Line Args Example",
+            "type": "python",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/udemy_python_advanced/Chapter04_Functions",
+            "program": "command_line_args.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": ["--name", "John", "--age", "37", "--admin", "True"]
+        }, 
     ]
 }
