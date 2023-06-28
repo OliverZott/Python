@@ -31,3 +31,9 @@
 - Anstatt einfacher HTML wird eine **Dashboard-Webanwendung** mit lokaler URL generiert
 - Im Hintergrund läuft ein **Flask-Server**
 - Dashboard kann deployed on online bereitgestellt werden
+- Dash Apps bestehen aus zwei teilen:
+  - **Layout** (Aussehen der App)
+  - **Interaktivität** (Funktionen der App)
+- 2 Komponenten:
+  - **Dash HTML Components** (Dash Komponenten)
+  - **Dash Core Components** (HTML, CSS, JS)
