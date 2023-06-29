@@ -1,8 +1,26 @@
 {
     "python.analysis.typeCheckingMode": "basic",
+    "python.linting.enabled": true,
+    "python.linting.lintOnSave": true,
+    "python.linting.flake8Enabled": false,
+    "python.linting.pylintEnabled": false,
+    "python.formatting.provider": "black", // "none"
     "[python]": {
-        "editor.defaultFormatter": "ms-python.autopep8",
-        "editor.formatOnSave": true
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ms-python.python",
+        // "editor.defaultFormatter": "ms-python.autopep8",
+        // "editor.defaultFormatter": "ms-python.black-formatter",
+        // "editor.codeActionsOnSave": {
+        //     "source.organizeImports": true
+        // },
     },
-    "python.formatting.provider": "none"
+    // "isort.args": [
+    //     "--profile",
+    //     "black"
+    // ],
+    "isort.check": true,
+    "isort.importStrategy": "fromEnvironment",
+    "notebook.formatOnSave.enabled": true,
+    "ruff.fixAll": true,
+    "ruff.organizeImports": true,
 }

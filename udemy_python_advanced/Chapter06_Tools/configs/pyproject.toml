@@ -1,0 +1,25 @@
+# [tool.isort]
+# profile = "black"
+# force-single-line = true
+# include_trailing_comma = true
+# lines_after_import = 2
+# [tool.black]
+# line-length = 120
+# skip-string-normalization = false
+
+
+# RUFF
+#   - rules: https://beta.ruff.rs/docs/rules/
+#   - settings: https://beta.ruff.rs/docs/settings/ 
+[tool.ruff]
+line-length = 140
+[tool.ruff.isort]
+force-single-line = true
+force-sort-within-section = true
+[tool.ruff.mccabe]
+max-complexity = 10
+[tool.ruff.pydocstyle]
+convention = "numpy"
+[tool.ruff.flake8-annotations]
+allow-star-arg-any = true
+ignore-fully-untyped = true

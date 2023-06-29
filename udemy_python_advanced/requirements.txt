@@ -9,6 +9,11 @@ ipykernel
 # Testing
 
 # Linting
+flake8
+flake8-comprehensions
+pylint
+isort
 autopep8
+black
 
 # Documentation
