@@ -9,10 +9,9 @@ Pylint - https://pylint.readthedocs.io/en/stable/
     pylint .\test.py
     pylint --generate-rcfile > .pylintrc
 """
-
 import math
 
-l = [1, 2, 3]  # comment
+q = [1, 2, 3]  # comment
 
 
 def print_stuff(l):  # noqa: E741

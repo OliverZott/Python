@@ -25,8 +25,11 @@ import optimizer: tool that automatically sorts and formats import statements
 
 ## Autppep8
 
+- vs code extension
+
 ## Black
 
+- vs code extension
 - standard ("better" then autopep8?)
 
 ## Ruff
@@ -35,3 +38,11 @@ import optimizer: tool that automatically sorts and formats import statements
 - `ruff .` ...testing all files in current directory
 - `ruff . --fix` ...fixing all files in current directory
 - to test: `Measure-Command {isort .}` vs `Measure-Command {ruff .}`
+
+## Autodocstring
+
+- install vs code extension
+- configure in settings.json
+- usage: `"""<tab>` or `"""<enter>`
+
+## Mypy

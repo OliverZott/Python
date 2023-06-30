@@ -1,8 +1,6 @@
 """
 Example from: https://github.com/hhatto/autopep8#usage
 """
-
-
 import math
 import sys
 
