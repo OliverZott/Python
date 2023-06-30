@@ -5,6 +5,9 @@ pandas
 plotly
 kaleido # to export static plotly images
 scipy
+dash
+dash-core-components
+dash-html-components
 
 # Course Original Requirements
 # alabaster
