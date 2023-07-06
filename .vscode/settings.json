@@ -1,29 +1,29 @@
 {
     "python.analysis.typeCheckingMode": "basic",
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--line-length=144",
+    ],
+    "python.linting.flake8Args": [
+        "--exclude=*/venv/*"
+    ],
     "python.linting.enabled": true,
     "python.linting.lintOnSave": true,
-    "python.linting.flake8Enabled": false,
-    "python.linting.pylintEnabled": false,
-    "python.formatting.provider": "none", // "none" // "black" // "autopep8"
+    "python.linting.mypyEnabled": true,
     "[python]": {
         "editor.formatOnSave": true,
-        // "editor.defaultFormatter": "ms-python.autopep8",
-        // "editor.defaultFormatter": null,
         "editor.defaultFormatter": "ms-python.black-formatter",
         "editor.codeActionsOnSave": {
-            "source.fixAll.ruff": false,
             "source.organizeImports": true,
-            "source.organizeImports.ruff": false
         },
     },
     "isort.args": [
         "--profile",
-        "black"
+        "black",
+        "--force-single-line-imports"
     ],
     "isort.check": true,
     "isort.importStrategy": "fromEnvironment",
     "notebook.formatOnSave.enabled": true,
-    "ruff.fixAll": false,
-    "ruff.organizeImports": false,
     "autoDocstring.docstringFormat": "numpy"
 }

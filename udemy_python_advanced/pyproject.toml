@@ -1,27 +1,39 @@
+[build-system]
+requires = ["black", "isort"]
+
+[tool.black]
+line-length = 144
+force_single_line = true
+exclude = "venv/"
+
 [tool.isort]
-# profile = "black"
+profile = "black"
 skip = [".gitignore", ".dockerignore"]
 extend_skip = [".md", ".json"]
 force_single_line = true
 lines_after_imports = 2
-# include_trailing_comma = true
-# [tool.black]
-# line-length = 120
+include_trailing_comma = true
 # skip-string-normalization = false
 
+[tool.flake8]
+exclude = ["*/venv/*"]
+
+[tool.mypy]
+python_version = "3.11"
 
 # RUFF
 #   - rules: https://beta.ruff.rs/docs/rules/
 #   - settings: https://beta.ruff.rs/docs/settings/ 
-[tool.ruff]
-line-length = 140
-[tool.ruff.isort]
-force-single-line = true
+# [tool.ruff]
+# target-version = "py311"
+# line-length = 140
+# [tool.ruff.isort]
+# force-single-line = true
 # force-sort-within-section = true
-[tool.ruff.mccabe]
-max-complexity = 10
-[tool.ruff.pydocstyle]
-convention = "numpy"
-[tool.ruff.flake8-annotations]
-allow-star-arg-any = true
-ignore-fully-untyped = true
+# [tool.ruff.mccabe]
+# max-complexity = 10
+# [tool.ruff.pydocstyle]
+# convention = "numpy"
+# [tool.ruff.flake8-annotations]
+# allow-star-arg-any = true
+# ignore-fully-untyped = true

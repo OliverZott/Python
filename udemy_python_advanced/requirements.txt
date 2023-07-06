@@ -1,6 +1,6 @@
-pip>=22.1
-setuptools>=60.0
-wheel>=0.36
+# pip>=23.1
+# setuptools>=60.0
+# wheel>=0.36
 
 # Libraries
 ipython
@@ -8,12 +8,16 @@ ipykernel
 
 # Testing
 
+# Formatter
+black
+isort
+
 # Linting
 flake8
 flake8-comprehensions
-pylint
-isort
-autopep8
-black
+
+# Type annoataion linter
+mypy
 
 # Documentation
+
