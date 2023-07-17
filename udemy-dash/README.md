@@ -2,7 +2,7 @@
 
 <https://www.udemy.com/course/interaktive-python-visualisierungen-mit-plotly-und-dash/learn/lecture/14723266#overview>
 
-Resources:
+Resources:  
 <https://plotly.com/python/>
 <https://plotly.com/python/reference/>
 
