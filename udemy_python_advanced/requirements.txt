@@ -21,3 +21,5 @@ mypy
 
 # Documentation
 
+# Logging
+loguru

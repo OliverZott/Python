@@ -12,7 +12,7 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "justMyCode": true
-        }, 
+        },
         {
             "name": "Python: Command Line Args Example",
             "type": "python",
@@ -21,7 +21,21 @@
             "program": "command_line_args.py",
             "console": "integratedTerminal",
             "justMyCode": true,
-            "args": ["--name", "John", "--age", "37", "--admin", "True"]
-        }, 
+            "args": [
+                "--name",
+                "John",
+                "--age",
+                "37",
+                "--admin",
+                "True"
+            ]
+        },
+        {
+            "name": "Python Debug: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
     ]
 }
