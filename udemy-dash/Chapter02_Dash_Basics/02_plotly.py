@@ -32,9 +32,7 @@ app.layout = html.Div(
                         },
                     )
                 ],
-                "layout": go.Layout(
-                    title="My scatter plot", xaxis={"title": "X - Axis"}
-                ),
+                "layout": go.Layout(title="My scatter plot", xaxis={"title": "X - Axis"}),
             },
         ),
         dcc.Graph(
@@ -54,9 +52,7 @@ app.layout = html.Div(
                         },
                     )
                 ],
-                "layout": go.Layout(
-                    title="My scatter plot 2", xaxis={"title": "X - Axis"}
-                ),
+                "layout": go.Layout(title="My scatter plot 2", xaxis={"title": "X - Axis"}),
             },
         ),
     ]

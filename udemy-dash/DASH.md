@@ -35,5 +35,5 @@
   - **Layout** (Aussehen der App)
   - **Interaktivität** (Funktionen der App)
 - 2 Komponenten:
-  - **Dash HTML Components** (Dash Komponenten)
-  - **Dash Core Components** (HTML, CSS, JS)
+  - **Dash HTML Components** ...describe what the component looks like (html, cssm js)
+  - **Dash Core Components** ...describe the interactive components of the app (dropdowns, sliders, graphs, etc.)
