@@ -1,14 +1,20 @@
+python_version >= '3.11'
 ipython
 ipykernel
 numpy
 pandas
 plotly
-kaleido # to export static plotly images
-scipy
 dash
-dash-core-components
-dash-html-components
 
+black # Formatter
+isort # Formatter
+flake8 # Linting
+flake8-comprehensions
+mypy # Type annoataion linter
+
+# kaleido # to export static plotly images
+
+# scipy
 # Course Original Requirements
 # alabaster
 # asn1crypto

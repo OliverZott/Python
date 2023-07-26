@@ -1,10 +1,15 @@
-# Python Advanced
+# Plotly - Dash
 
 <https://www.udemy.com/course/interaktive-python-visualisierungen-mit-plotly-und-dash/learn/lecture/14723266#overview>
 
-Resources:  
-<https://plotly.com/python/>
-<https://plotly.com/python/reference/>
+**Resources**  
+
+- <https://plotly.com/python/>
+- <https://plotly.com/python/reference/>
+
+**Dev Mode**
+
+- <https://dash.plotly.com/devtools#configuring-dash-dev-tools-&-app.run-reference>
 
 ## Prerequisites
 
@@ -44,3 +49,49 @@ pip install --upgrade --force-reinstall -r requirements.txt
 - create settings file
 - format on save enable
 - format notebook enable
+
+## Useful tools and packages
+
+### Formatter-Linter-Type checker
+
+- Formatter
+  - black
+  - `black --check .`
+  - isort
+  - `isort --check .`
+  - `isort . --diff` (check diff)
+  - `isort --skip venv .` (apply)
+- Linter
+  - flake8
+  - flake8-comprehensions
+  - `flake8 .`
+  - flake8 only checks the code by default and does not apply any changes.
+- Type checker
+  - mypy
+  - `mypy --exclude venv .`
+  - mypy only checks the code by default and does not apply any changes
+
+### Pre-Commit
+
+Running all tools on commit or manually. Every time you make a commit, pre-commit will automatically run black, flake8, isort, and mypy on the code.
+
+- <https://pre-commit.com/>
+- `pip install pre-commit`
+- **.pre-commit-config.yaml** for configuration (in root dir)
+- `pre-commit install` to set up the pre-commit hook
+- `pre-commit install-hooks`
+- `pre-commit run --all-files`
+
+### Logging
+
+- loguru
+
+### Testing
+
+- pytest
+
+## Autodocstring (doc tool)
+
+- install vs code extension
+- configure in settings.json
+- usage: `"""<tab>` or `"""<enter>`

@@ -1,0 +1,10 @@
+[tool.mypy]
+disable_error_code = ["attr-defined"]
+exclude = [
+    'venv',
+    'callbacks_01_Input_Output\.py$', # TOML literal string (single-quotes, no escaping necessary)
+    "^file2\\.py$",                   # TOML basic string (double-quotes, backslash and other characters need escaping)
+]
+[tool.flake8]
+exclude = "venv"
+max-line-length = 144

@@ -61,10 +61,12 @@ black, ruff, (isort), autodocstring, mypy
 
 ### Pre-Commit
 
-- running all tools on commit or manually
+Running all tools on commit or manually. Every time you make a commit, pre-commit will automatically run black, flake8, isort, and mypy on the code.
+
 - <https://pre-commit.com/>
-- `pipo install pre-commit`
-- `pre-commit install`
+- `pip install pre-commit`
+- **.pre-commit-config.yaml** for configuration (in root dir)
+- `pre-commit install` to set up the pre-commit hook
 - `pre-commit install-hooks`
 - `pre-commit run --all-files`
 
