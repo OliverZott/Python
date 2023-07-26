@@ -1,5 +1,9 @@
 # Flask Minimum web-api example
 
+- `kubectl config get-contexts`
+- `kubectl get pods --namespace <namespace>`
+- `kubectl get pods --namespace <namespace> <podname> -o yaml`
+
 # Kubernetes
 
 - generate docker image with env-var
