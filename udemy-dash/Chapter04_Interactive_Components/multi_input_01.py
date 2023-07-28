@@ -1,11 +1,8 @@
+import dash
 import pandas as pd
 import plotly.graph_objs as go
-from dash.dependencies import Input
-from dash.dependencies import Output
-
-import dash
-from dash import dcc
-from dash import html
+from dash import dcc, html
+from dash.dependencies import Input, Output
 
 # Data
 df = pd.read_csv("udemy-dash/data/mpg.csv")

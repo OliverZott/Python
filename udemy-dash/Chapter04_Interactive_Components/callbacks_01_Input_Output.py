@@ -1,9 +1,7 @@
-from dash.dependencies import Input
-from dash.dependencies import Output
-
 import dash
 from dash import dcc  # type: ignore[attr-defined]
 from dash import html  # type: ignore[attr-defined]
+from dash.dependencies import Input, Output
 
 app = dash.Dash(title=__name__)  # type: ignore[attr-defined]
 
