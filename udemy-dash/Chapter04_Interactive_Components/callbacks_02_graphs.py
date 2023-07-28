@@ -35,7 +35,7 @@ app.layout = html.Div(
     Output(component_id="graph-gapminder", component_property="figure"),
     Input(component_id="year-dropdown", component_property="value"),
 )
-def update_graph(selected_year: dcc.Input):
+def update_graph(selected_year: str) -> dict:
     df_by_year = df[df["year"] == selected_year]
 
     traces = []
@@ -48,10 +48,10 @@ def update_graph(selected_year: dcc.Input):
                 x=df_by_continent["gdpPercap"],
                 y=df_by_continent["lifeExp"],
                 text=df_by_continent["country"],
+                name=continent_name,
                 mode="markers",
                 marker=dict(size=12),
                 opacity=0.8,
-                name=continent_name,
             )
         )
 
