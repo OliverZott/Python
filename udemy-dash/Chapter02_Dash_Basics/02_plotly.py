@@ -1,8 +1,9 @@
-import dash
 import dash_core_components as dcc
 import dash_html_components as html
 import numpy as np
 import plotly.graph_objs as go
+
+import dash
 
 app = dash.Dash()
 
@@ -31,7 +32,10 @@ app.layout = html.Div(
                         },
                     )
                 ],
-                "layout": go.Layout(title="My scatter plot", xaxis={"title": "X - Axis"}),
+                "layout": go.Layout(
+                    title="My scatter plot",
+                    xaxis={"title": "X - Axis"},
+                ),
             },
         ),
         dcc.Graph(
@@ -51,7 +55,10 @@ app.layout = html.Div(
                         },
                     )
                 ],
-                "layout": go.Layout(title="My scatter plot 2", xaxis={"title": "X - Axis"}),
+                "layout": go.Layout(
+                    title="My scatter plot 2",
+                    xaxis={"title": "X - Axis"},
+                ),
             },
         ),
     ]

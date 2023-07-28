@@ -13,25 +13,28 @@ y_vals = np.random.randn(100)
 trace1 = go.Scatter(
     x=x_vals,
     y=y_vals,
-    mode='lines',
-    name='lines')
+    mode="lines",
+    name="lines",
+)
 
 trace2 = go.Scatter(
     x=x_vals,
-    y=y_vals+5,
-    mode='markers+lines',
-    name='markers+lines')
+    y=y_vals + 5,
+    mode="markers+lines",
+    name="markers+lines",
+)
 
 trace3 = go.Scatter(
     x=x_vals,
-    y=y_vals-5,
-    mode='markers',
-    name='markers')
+    y=y_vals - 5,
+    mode="markers",
+    name="markers",
+)
 
 data = [trace1, trace2, trace3]
 
 
-layout = go.Layout(title='Line Charts')
+layout = go.Layout(title="Line Charts")
 
 
 fig = go.Figure(data=data, layout=layout)
@@ -42,6 +45,6 @@ pyo.plot(fig)
 # Real data sample
 
 # import data
-df = pd.read_csv('../data/nst-est2017-alldata.csv')
+df = pd.read_csv("../data/nst-est2017-alldata.csv")
 
 df.head()

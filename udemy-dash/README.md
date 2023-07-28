@@ -62,12 +62,12 @@ pip install --upgrade --force-reinstall -r requirements.txt
   - `isort . --diff` (check diff)
   - `isort --skip venv .` (apply)
 - Linter
-  - flake8
+  - flake8 (check only)
   - flake8-comprehensions
   - `flake8 .`
   - flake8 only checks the code by default and does not apply any changes.
 - Type checker
-  - mypy
+  - mypy (check only)
   - `mypy --exclude venv .`
   - mypy only checks the code by default and does not apply any changes
 

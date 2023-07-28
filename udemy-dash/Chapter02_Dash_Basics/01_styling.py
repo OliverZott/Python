@@ -9,7 +9,11 @@ colors = {"background1": "#111111", "background2": "#441137", "text": "#7FDBFF"}
 
 app.layout = html.Div(
     children=[
-        html.H1("Hello Dash", id="hello1", style={"textAlign": "center", "color": colors["text"]}),
+        html.H1(
+            "Hello Dash",
+            id="hello1",
+            style={"textAlign": "center", "color": colors["text"]},
+        ),
         html.Div(children="Dash: WebApp"),
         dcc.Graph(
             id="graph1",
