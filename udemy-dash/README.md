@@ -30,6 +30,10 @@ pip freeze > pip_list.txt
 pip install --upgrade --force-reinstall -r requirements.txt
 ```
 
+Generate .env file with base path to the data folder. e.g:
+
+- `DATA_BASE_PATH=c:/folder/folder/data/`
+
 ## Run
 
 ## TOC

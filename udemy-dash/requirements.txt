@@ -1,10 +1,10 @@
 python_version >= '3.11'
 ipython
 ipykernel
-numpy
 pandas
 plotly
 dash
+python-dotenv
 
 black # Formatter
 isort # Formatter

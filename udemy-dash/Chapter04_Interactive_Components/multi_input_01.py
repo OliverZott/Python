@@ -1,12 +1,24 @@
-import dash
+import os
+
 import pandas as pd
 import plotly.graph_objs as go
-from dash import dcc, html
-from dash.dependencies import Input, Output
+from dash.dependencies import Input
+from dash.dependencies import Output
+from dotenv import load_dotenv
+
+import dash
+from dash import dcc
+from dash import html
+
+load_dotenv()
+
+DATA_BASE_PATH = str(os.getenv("DATA_BASE_PATH"))
+file_name = "mpg.csv"
+file_path = os.path.join(DATA_BASE_PATH, file_name)
 
 # Data
-df = pd.read_csv("udemy-dash/data/mpg.csv")
-print(df.head())
+df = pd.read_csv(file_path)
+# print(df.head())
 
 
 # Input arguments
