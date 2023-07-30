@@ -1,9 +1,10 @@
-import dash
 import pandas as pd
 import plotly.graph_objs as go
+from dash.dependencies import Input, Output
+
+import dash
 from dash import dcc  # type: ignore[attr-defined]
 from dash import html
-from dash.dependencies import Input, Output
 
 df = pd.read_csv("udemy-dash/data/gapminderDataFiveYear.csv")
 print(df.head())

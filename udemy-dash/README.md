@@ -13,6 +13,8 @@
 
 ## Prerequisites
 
+Generate virtual environment and install packages.
+
 ```bash
 # Create/activate/deactivate venv
 python -m venv venv
