@@ -35,7 +35,37 @@
             "type": "python",
             "request": "launch",
             "program": "${file}",
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}",
+                "PYTHONBREAKPOINT": "breakpoint",
+                "PYDEVD_USE_FRAME_EVAL": "NO",
+                "PYDEVD_DISABLE_FILE_VALIDATION": "1",
+                "PYDEVD_WARN_SLOW_RESOLVE_TIMEOUT": "2",
+            },
+            "args": [
+                "-Xfrozen_modules=off",
+                "-v"
+            ]
         },
+        // {
+        //     "version": "0.2.0",
+        //     "configurations": [
+        //         {
+        //             "name": "Python: Current File",
+        //             "type": "python",
+        //             "request": "launch",
+        //             "program": "${file}",
+        //             "console": "integratedTerminal",
+        //             "env": {
+        //                 "PYTHONBREAKPOINT": "breakpoint",
+        //                 "PYTHONPATH": "${workspaceFolder}",
+        //                 "PYDEVD_USE_FRAME_EVAL": "NO",
+        //                 "PYDEVD_DISABLE_FILE_VALIDATION": "1"
+        //             },
+        //             "args": ["-Xfrozen_modules=off"]
+        //         }
+        //     ]
+        // }
     ]
 }
