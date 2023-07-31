@@ -1,6 +1,7 @@
 import pandas as pd
 import plotly.graph_objs as go
-from dash.dependencies import Input, Output
+from dash.dependencies import Input
+from dash.dependencies import Output
 
 import dash
 from dash import dcc  # type: ignore[attr-defined]

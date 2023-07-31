@@ -77,10 +77,7 @@ def update_colors(color_input: str) -> str:
 )
 def update_image(color: str, wheels: str) -> str:
     image_name = df[(df["wheels"] == wheels) & (df["color"] == color)]["image"].values[0]
-    print(image_name)
     image_path = os.path.join(IMAGE_BASE_PATH, image_name)
-    # image_path = "C:\\repos\\python-training\\udemy-dash\\data\\images\\bluetricycle.jpg"
-    print(image_path)
     return encode_image(image_path)
 
 
