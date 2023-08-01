@@ -25,5 +25,8 @@
     "isort.check": true,
     "isort.importStrategy": "fromEnvironment",
     "notebook.formatOnSave.enabled": true,
-    "autoDocstring.docstringFormat": "numpy"
+    "autoDocstring.docstringFormat": "numpy",
+    "python.analysis.extraPaths": [
+        "./udemy-dash/utils"
+    ]
 }
