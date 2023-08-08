@@ -78,17 +78,27 @@ app.layout = html.Div(
     ]
 )
 
+api_key = "14ZRWIEBC1DWVZY3"
 
-def get_data(stocks: str):
-    api_key = "14ZRWIEBC1DWVZY3"
-    url: str = f"https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol={stocks}&interval=5min&apikey={api_key}"
+def get_data(stock: str):
+    url: str = f"https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol={stock}&interval=5min&apikey={api_key}"
     print(url)
     resp = requests.get(url)
     json_resp = resp.json()
     data = json_resp["Weekly Adjusted Time Series"]
+    # data = json_resp["Weekly Adjusted Time Series"]
     df = pd.read_json(json.dumps(data))
     return df.T
 
+
+def get_all_data(stocks: list):
+    lst = []
+    for stock in stocks:
+        df = get_data(stock)
+        lst.append(df)
+    # df = pd.DataFrame()
+    df = pd.concat(lst)
+    return df
 
 @app.callback(
     Output(component_id="stock-graph", component_property="figure"),
@@ -115,7 +125,7 @@ def update_stock_graph(stock):
     ]
 
     layout = go.Layout(
-        title="Stocks - {stock}",
+        title=f"Stocks - {stock}",
         xaxis=dict(title="Date"),
         yaxis=dict(title="Closing Price"),
     )
@@ -130,9 +140,14 @@ def update_stock_graph(stock):
 
 # Run App
 if __name__ == "__main__":
-    app.run(
-        debug=True,
-        dev_tools_hot_reload=True,
-        dev_tools_ui=True,
-        use_reloader=True,
-    )
+
+    # testing functions
+
+
+
+    # app.run(
+    #     debug=True,
+    #     dev_tools_hot_reload=True,
+    #     dev_tools_ui=True,
+    #     use_reloader=True,
+    # )
