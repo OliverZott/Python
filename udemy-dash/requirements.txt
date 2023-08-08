@@ -4,6 +4,7 @@ pandas
 plotly
 dash
 python-dotenv
+dash-auth
 
 black # Formatter
 isort # Formatter
