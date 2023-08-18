@@ -1,0 +1,20 @@
+# Basics
+# python_version >= '3.11'
+ipykernel
+
+# Math / Plots
+numpy
+matplotlib
+# matplotlib.pyplot
+plotly
+seaborn
+scipy
+# jupyterlab
+
+
+# Tools
+black # Formatter
+isort # Formatter
+flake8 # Linting
+flake8-comprehensions
+mypy # Type annoataion linter
